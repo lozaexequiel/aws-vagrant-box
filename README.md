@@ -8,8 +8,8 @@ Add the following lines to the credentials file:
 
 ~~~
 [default]
-aws_access_key_id = **<ACCESS_KEY>**
-aws_secret_access_key = **<SECRET_KEY>**
+aws_access_key_id = <ACCESS_KEY>
+aws_secret_access_key = <SECRET_KEY>
 ~~~
 
 Create a file name ".env" in your project directory
@@ -26,12 +26,12 @@ PACKER_VERSION="1.8.3"
 The following is the folder structure of the directories:
 
 ~~~
-**vagrant_data/
+vagrant_data/
 ├── .env
 │   ├── .aws
 │   │   ├── config
 │   │   └── credentials
-│   └── .env**
+│   └── .env
 ~~~
 
 To initialize the project, run the following commands:
@@ -104,6 +104,6 @@ Script documentation in path:
 
 ```/scripts/README.md```
 
-Vagrant full documentation:
+Vagrant full documentation can be found [here][vagrant].
 
-```https://developer.hashicorp.com/vagrant/docs/```
+[vagrant]: https://developer.hashicorp.com/vagrant/docs/
