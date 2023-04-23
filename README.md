@@ -1,5 +1,9 @@
 # Pre-requisites
 
+- Vagrant
+- Virtualbox
+- Valid AWS credentials
+
 Create a folder named ".env/.aws" in your project directory
 
 Create a file named "credentials" in the ".env/.aws" folder
@@ -12,7 +16,17 @@ aws_access_key_id = <ACCESS_KEY>
 aws_secret_access_key = <SECRET_KEY>
 ~~~
 
-Create a file name ".env" in your project directory
+Create a file named "config" in the ".env/.aws" folder
+
+Add the following lines to the config file:
+
+~~~
+[default]
+region = <REGION>
+output = json
+~~~
+
+Create a file name ".env" in your .env/ directory
 
 Add the folowing lines to the .env file:
 
@@ -21,18 +35,26 @@ AWS_CONFIG_FILE=/vagrant_data/.env/.aws/config
 AWS_SHARED_CREDENTIALS_FILE=/vagrant_data/.env/.aws/credentials
 TERRAFORM_VERSION="1.2.8"
 PACKER_VERSION="1.8.3"
+USER=vagrant
+HOME=/home/vagrant
+PACKAGES="docker.io ansible unzip python3-pip docker-compose git"
 ~~~
 
-The following is the folder structure of the directories:
+The following is the folder structure of the configuration directories:
 
 ~~~
-vagrant_data/
+./
 ├── .env
 │   ├── .aws
 │   │   ├── config
 │   │   └── credentials
 │   └── .env
 ~~~
+
+You can use an example of the .env directory in the path:
+
+```/example/.env/```
+
 
 To initialize the project, run the following commands:
 
@@ -61,6 +83,7 @@ To run the provision script, run the following command:
 To run the provision script without reloading the VM, run the following command:
 
 ```vagrant provision --provision-with shell```
+
 
 # Vagrantfile explained
 
