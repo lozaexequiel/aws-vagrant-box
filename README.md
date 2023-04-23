@@ -51,9 +51,9 @@ The following is the folder structure of the configuration directories:
 │   └── .env
 ~~~
 
-You can use an example of the .env directory in the path:
+You can use an examples of the .env directory in the path:
 
-```/example/.env/```
+```/examples/```
 
 
 To initialize the project, run the following commands:
